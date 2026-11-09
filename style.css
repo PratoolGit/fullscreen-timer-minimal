@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
-
 :root {
   color-scheme: dark;
-  --background: #080a0f;
-  --foreground: #f1f3f7;
+  --background: #000000;
+  --foreground: #f5f5f7;
 }
 
 * { box-sizing: border-box; }
@@ -18,7 +16,7 @@ html, body {
 
 body {
   color: var(--foreground);
-  font-family: "DM Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-family: "Segoe UI Variable", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -33,36 +31,25 @@ body {
   isolation: isolate;
 }
 
-.stage::before {
-  position: absolute;
-  z-index: -1;
-  width: min(72vw, 72vh);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  content: "";
-  background: radial-gradient(circle, rgba(76, 105, 150, .105), rgba(8, 10, 15, 0) 68%);
-  filter: blur(12px);
-}
-
 .clock {
   display: block;
   max-width: 100%;
   color: var(--foreground);
   font-size: clamp(3.2rem, 15.2vw, 18rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1;
-  letter-spacing: -.085em;
+  letter-spacing: -.065em;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum";
   text-align: center;
-  text-shadow: 0 0 54px rgba(143, 173, 220, .075);
-  transform: translateX(-.035em);
+  text-shadow: 0 0 40px rgba(255, 255, 255, .035);
+  transform: translateX(-.025em);
 }
 
 .clock.finished {
   color: #f0a0a0;
-  text-shadow: 0 0 54px rgba(240, 100, 100, .12);
+  text-shadow: 0 0 42px rgba(240, 100, 100, .12);
 }
 
 @media (max-width: 520px) {
